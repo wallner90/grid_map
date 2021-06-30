@@ -14,3 +14,6 @@ ament_add_gtest(costmap-2d-ros-test
 ament_target_dependencies(costmap-2d-ros-test
   ${dependencies}
 )
+
+target_compile_definitions(${PROJECT_NAME}-test PUBLIC "PLUGINLIB__DISABLE_BOOST_FUNCTIONS")
+target_compile_definitions(costmap-2d-ros-test PUBLIC "PLUGINLIB__DISABLE_BOOST_FUNCTIONS")
